@@ -1,0 +1,16 @@
+#server:
+#  shutdown: graceful
+#  port: 8081
+spring:
+  batch:
+    job:
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_batch?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+  sql:
+    init:
+      schema-locations: classpath:org/springframework/batch/core/schema-mysql.sql
+      mode: never
